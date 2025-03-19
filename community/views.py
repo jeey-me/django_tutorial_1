@@ -34,6 +34,3 @@ def index(request) :
     latest_article_list = Article.objects.all().order_by('-cdate')[:3]
     return render(request, '/index.html',{'latest_article_list':latest_article_list})
 
-# 글 상세보기 뷰 함수
-def viewDetail(request, num):
-    return render(request, 'view_detail.html', {'article_id': num})
