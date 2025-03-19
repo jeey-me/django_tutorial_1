@@ -30,7 +30,6 @@ def articleList(request) :
      # return render(request, '/index.html',{'키' : 파이썬변수})
     return render(request, 'list.html', {'article_list': article_list})
 
-def index(request) : 
-    latest_article_list = Article.objects.all().order_by('-cdate')[:3]
-    return render(request, '/index.html',{'latest_article_list':latest_article_list})
+
+
 
