@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.urls import reverse
 from community.forms import Form
 from .models import Article  # 현재 앱(community)의 models.py에서 import
 # Create your views here.
@@ -18,6 +19,7 @@ def write(request) :
         # print(from)
         if form. is_valid():
             form.save() # 필드값 저장함수
+            return redirect(reverse('community:list')) # path name 
     else:
         form =Form()
     return render(request, 'write.html', {'form':form}) #request, template,

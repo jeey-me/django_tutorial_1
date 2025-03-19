@@ -3,6 +3,7 @@ from django.urls import path
 from community.views import write, articleList
 from community.views import viewDetail
 
+app_name = "community" # community : list 
 urlpatterns = [
     # http://127.0.0.1:8000/write/
     path('write/', write, name='write'), #path,view의 함수
