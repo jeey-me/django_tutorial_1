@@ -30,6 +30,12 @@ def articleList(request) :
      # return render(request, '/index.html',{'키' : 파이썬변수})
     return render(request, 'list.html', {'article_list': article_list})
 
+# 글 상세보기 뷰 함수
+def viewDetail(request, num=1):
+    Article_detail = Article.objects.get(id=num)
+   # Article_detail = get_object_or_404(Article, id =num)
+    return render(request, 'view_detail.html', {'article_detail': Article_detail})
+
 
 
 

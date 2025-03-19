@@ -10,7 +10,7 @@
 <p>이름 | 제목 | 작성 날짜</p>
     <ul>
         {% for article in article_list %}
-            <li>{{ article.title }} | {{ article.name }} | {{ article.cdate|date:"Y년 m d일 D"}}</li>
+            <li><a href="/view_detail/{{ article.id }}">{{ article.title }} </a> | {{ article.name }} | {{ article.cdate|date:"Y년 m d일 D"}}</li>
         {% endfor %} 
         <!-- {{ article.cdate|date:"Y년 n월 j일 l"}} 도 가능 더직관적 -->
     </ul>

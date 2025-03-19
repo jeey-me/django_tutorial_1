@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <!-- tr>td*2 : tr 아래에 td 두개 만들어라 -->
+        <tr>
+            <td>no</td>
+            <td>{{ article_detail.pk }}</td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td>{{ article_detail.title }}</td>
+        </tr>
+        <tr>
+            <td>저자</td>
+            <td>{{ article_detail.name }}</td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td>{{ article_detail.comtents }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{ article_detail.email }}</td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
