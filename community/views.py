@@ -25,12 +25,12 @@ def write(request) :
     return render(request, 'write.html', {'form':form}) #request, template,
 
 def articleList(request) : 
-    article_list = Article.objects.all()
+    latest_article_list = Article.objects.all().order_by('-cdate')
     # print(article_list)
     # for a in article_list : 
     #     print("이름: ", a.name, "제목 : ", a.title)
      # return render(request, '/index.html',{'키' : 파이썬변수})
-    return render(request, 'list.html', {'article_list': article_list})
+    return render(request, 'list.html',{'latest_article_list': latest_article_list})
 
 # 글 상세보기 뷰 함수
 def viewDetail(request, num=1):
