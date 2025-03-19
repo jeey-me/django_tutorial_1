@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from community.views import write, articleList
-from community.views import viewDetail
+from community.views import viewDetail, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,6 @@ urlpatterns = [
     path('list/', articleList, name='list'), #path,view의 함수
     # http://127.0.0.1:8000/view_detail/1 -> 동적페이지 숫자바뀔 때마다 변함 <int:num>로 표현
     path('view_detail/<int:num>/', viewDetail, name ='view_detail'),
-
+    # http://127.0.0.1:8000/
+    path('', index, name='index')
 ]
