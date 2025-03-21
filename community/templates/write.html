@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block contents %}
     <form>
     <p>{{ "hello" }}</p>
     </form>
@@ -16,5 +11,4 @@
         </table>
         <button type="submit" >확인</button>
     </form>
-</body>
-</html>
+{% endblock contents %}
