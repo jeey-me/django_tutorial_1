@@ -9,3 +9,4 @@ class CountryData(models.Model):
         verbose_name_plural = "각 나라별 인구 데이터"
     def __str__(self):
         return f'{self.country}--{self.population}'
+    
