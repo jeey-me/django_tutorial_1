@@ -1,11 +1,15 @@
 from django.shortcuts import render
+from dashboard.models import CountryData
 # Create your views here.
 
 
 def dashboard(request) : 
-    
-    # print(article_list)
-    # for a in article_list : 
-    #     print("이름: ", a.name, "제목 : ", a.title)
-     # return render(request, '/index.html',{'키' : 파이썬변수})
-    return render(request, 'dashboard.html',)
+    # 비즈니스 로직
+    # db 테이블에서 데이터 조회 
+    datas = CountryData.objects.all()
+    #랜더링 데이터 만들기 
+    context = {
+        'dataset': datas
+    }
+    return render(request, 'dashboard.html', 
+                  context)
